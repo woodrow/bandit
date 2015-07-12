@@ -1,0 +1,35 @@
+# optional: after how many files to update progress
+#show_progress_every: 100
+
+# optional: plugins directory name
+plugins_dir: '/Users/stephenwoodrow/src/bandit/plugins'
+
+# optional: plugins discovery name pattern
+plugin_name_pattern: '*.py'
+
+# optional: terminal escape sequences to display colors
+#output_colors:
+#    DEFAULT: '\033[0m'
+#    HEADER: '\033[95m'
+#    LOW: '\033[94m'
+#    MEDIUM: '\033[93m'
+#    HIGH: '\033[91m'
+
+# optional: log format string
+#log_format: "[%(module)s]\t%(levelname)s\t%(message)s"
+
+# globs of files which should be analyzed
+include:
+#  - '*/settings.py'
+  - '*.py'
+#  - '*.pyw'
+
+# a list of strings, which if found in the path will cause files to be excluded
+# for example /tests/ - to remove all all files in tests directory
+exclude_dirs:
+
+profiles:
+    Passwords:
+        include:
+            - high_entropy_string
+            - safe_secret_assignment
